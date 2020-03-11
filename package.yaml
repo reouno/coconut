@@ -25,13 +25,21 @@ dependencies:
 library:
   source-dirs: src
   dependencies:
+    - conduit
     - containers
+    - extensible
     - http-client
+    - lens
+    - monad-logger
+    - persistent
+    - persistent-postgresql
+    - persistent-template
+    - persistent-util
     - servant-client
     - servant-server
     - text
-    - wai
-    - warp
+    - time
+    - yaml
 
 executables:
   coconut-exe:
@@ -43,6 +51,8 @@ executables:
       - -with-rtsopts=-N
     dependencies:
       - coconut
+      - wai-cors
+      - warp
 
 tests:
   coconut-test:

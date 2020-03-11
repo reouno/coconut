@@ -38,11 +38,11 @@ run:
 	stack exec ${PRJ_NAME}-exe
 
 .PHONY: init-db
-init-db: reset-db migrate-db seeds-db
+init-db: create-db migrate-db seeds-db
 
-.PHONY: reset-db
-reset-db:
-	./db/reset.sh
+.PHONY: create-db
+create-db:
+	./db/create.sh
 
 .PHONY: migrate-db
 migrate-db:

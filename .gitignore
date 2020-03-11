@@ -1,3 +1,5 @@
 .stack-work/
 coconut.cabal
 *~
+
+.DS_Store

@@ -29,7 +29,7 @@ resolver: lts-14.27
 #   - auto-update
 #   - wai
 packages:
-- .
+  - .
 # Dependency packages to be pulled from upstream that are not in the resolver.
 # These entries can reference officially published versions as well as
 # forks / in-progress versions pinned to a git hash. For example:
@@ -39,8 +39,10 @@ packages:
 # - git: https://github.com/commercialhaskell/stack.git
 #   commit: e7b331f14bcffb8367cd58fbfc8b40ec7642100a
 #
-# extra-deps: []
-
+extra-deps:
+  - url: https://github.com/reouno/persistent-util/archive/0.3.2.14.14.tar.gz
+  - extensible-0.7.1@sha256:feee1d0109e716075a72334a02086b4969cd52537661ffb5fd959ce5f9c01e25,2894
+  - membership-0@sha256:3a11d8fd53cb1a76bb9273e6c929bbf9d649f109714bf487abb3143be04ddc81,995
 # Override default flag values for local packages and extra-deps
 # flags: {}
 
